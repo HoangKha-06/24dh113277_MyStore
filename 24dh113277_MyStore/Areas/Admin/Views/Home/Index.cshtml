@@ -4,5 +4,30 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Trang Quản Trị</h2>
+<h2 class="bg-success">Danh sách danh mục sản phẩm</h2>
+<p>
+    @Html.ActionLink("Thêm Mới", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayFor(model => model.CategoryName)*@
+            Tên danh mục
+        </th>
+        <th></th>
+    </tr>
 
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.CategoryName)*@
+            </td>
+            <td>
+                @Html.ActionLink("Cập nhật", "Edit", new { id = item.CategoryID })
+                @Html.ActionLink("Xoá", "Delete", new { id = item.CategoryID })
+            </td>
+        </tr>
+    }
+</table>
