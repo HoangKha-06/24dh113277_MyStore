@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2  class="bg-success>Cập Nhật Danh Mục</h2>
+<h2  class="bg-success">Cập Nhật Danh Mục</h2>
 
 
 @using (Html.BeginForm())
@@ -17,7 +17,7 @@
         @Html.HiddenFor(model => model.CategoryID)  
         
         @Html.Partial("PV_CreateEditCategory", Model)
-        }
+        
         </div>
 }
 
