@@ -9,8 +9,6 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using PagedList;
-
 namespace _24dh113277_MyStore.Areas.Admin.Controllers
 {
     public class ProductsController : Controller
